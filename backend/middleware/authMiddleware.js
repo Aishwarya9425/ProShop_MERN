@@ -5,6 +5,7 @@ import User from '../models/userModel.js';
 //1st jwt sign with user id and secret , then verify ie decode it with verify
 
 // User must be authenticated
+//to access protected routes - only with signed users - add this middleware - before verify jwt
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 
