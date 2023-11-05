@@ -1,4 +1,4 @@
-# ProShop eCommerce Platform (v2)
+# ProShop eCommerce Platform 
 
 ## eCommerce platform built with the MERN stack & Redux.
 
@@ -81,10 +81,10 @@ Sample User Logins
 admin@email.com (Admin)
 123456
 
-john@email.com (Customer)
+Aishu@email.com (Customer)
 123456
 
-jane@email.com (Customer)
+Harry@email.com (Customer)
 123456
 ```
 
