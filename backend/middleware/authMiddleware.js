@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 import asyncHandler from './asyncHandler.js';
 import User from '../models/userModel.js';
 
+//1st jwt sign with user id and secret , then verify ie decode it with verify
+
 // User must be authenticated
 const protect = asyncHandler(async (req, res, next) => {
   let token;
