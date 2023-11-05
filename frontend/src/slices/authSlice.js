@@ -9,6 +9,7 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  // to set and clear items from local storage after login and logout
   reducers: {
     setCredentials: (state, action) => {
       state.userInfo = action.payload;
