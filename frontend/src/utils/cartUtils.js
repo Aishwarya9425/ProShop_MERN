@@ -18,11 +18,11 @@ export const updateCart = (state) => {
   state.itemsPrice = addDecimals(itemsPrice);
 
   // Calculate the shipping price
-  const shippingPrice = itemsPrice > 999 ? 0 : 150;
+  const shippingPrice = itemsPrice > 100 ? 0 : 20;
   state.shippingPrice = addDecimals(shippingPrice);
 
   // Calculate the tax price
-  const taxPrice = 2 * itemsPrice;
+  const taxPrice = 0.3 * itemsPrice;
   state.taxPrice = addDecimals(taxPrice);
 
   const totalPrice = itemsPrice + shippingPrice + taxPrice;

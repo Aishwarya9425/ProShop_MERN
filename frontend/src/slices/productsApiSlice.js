@@ -2,11 +2,9 @@ import { PRODUCTS_URL } from '../constants';
 import { apiSlice } from './apiSlice';
 
 //we dont have to use fetch/axios or create async thunk
-//using rtk query 
+//using rtk query
 export const productsApiSlice = apiSlice.injectEndpoints({
-
   endpoints: (builder) => ({
-
     //get all products
     getProducts: builder.query({
       query: ({ keyword, pageNumber }) => ({
@@ -33,7 +31,6 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       invalidatesTags: ['Product'],
     }),
 
-
     updateProduct: builder.mutation({
       query: (data) => ({
         url: `${PRODUCTS_URL}/${data.productId}`,
@@ -42,7 +39,6 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ['Products'],
     }),
-
 
     uploadProductImage: builder.mutation({
       query: (data) => ({
@@ -70,14 +66,15 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     }),
 
     getTopProducts: builder.query({
-      query: () => `${PRODUCTS_URL}/top`,
+      query: () => ({
+        url: `${PRODUCTS_URL}/top`,
+      }),
       keepUnusedDataFor: 5,
     }),
   }),
-
 });
 
-//export all queries 
+//export all queries
 export const {
   useGetProductsQuery,
   useGetProductDetailsQuery,
