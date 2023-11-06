@@ -1,4 +1,7 @@
 # ProShop eCommerce Platform 
+![mongo](image.png)
+
+![postman](image-1.png)
 
 ## eCommerce platform built with the MERN stack & Redux.
 
