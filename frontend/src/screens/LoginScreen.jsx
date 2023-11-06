@@ -36,7 +36,8 @@ const LoginScreen = () => {
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();
-      dispatch(setCredentials({ ...res })); //login 
+      dispatch(setCredentials({ ...res })); //login
+      toast.success('Logged in successfully');
       navigate(redirect);
     } catch (err) {
       toast.error(err?.data?.message || err.error);
@@ -45,11 +46,9 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-
       <h1>Sign In</h1>
 
       <Form onSubmit={submitHandler}>
-
         <Form.Group className='my-2' controlId='email'>
           <Form.Label>Email Address</Form.Label>
           <Form.Control
@@ -75,7 +74,6 @@ const LoginScreen = () => {
         </Button>
 
         {isLoading && <Loader />}
-
       </Form>
 
       <Row className='py-3'>
@@ -86,9 +84,7 @@ const LoginScreen = () => {
           </Link>
         </Col>
       </Row>
-
     </FormContainer>
-    
   );
 };
 
