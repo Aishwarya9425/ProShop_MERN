@@ -1,4 +1,8 @@
 # ProShop eCommerce Platform 
+
+![ezgif com-video-to-gif](https://github.com/Aishwarya9425/ProShop_MERN/assets/51038336/f662f439-ba5c-48a4-a06a-26eef4d06220)
+
+
 ![mongo](image.png)
 
 ![postman](image-1.png)
